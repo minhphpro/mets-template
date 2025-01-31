@@ -1,0 +1,22 @@
+### Upload file
+POST http://localhost:3000/api/upload/public
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="cloudinary.png"
+Content-Type: image/jpeg
+
+< ./public/cloudinary.png
+--boundary--
+
+
+### Upload pdf
+POST http://localhost:3000/api/upload/public
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="genrated_pdf.pdf"
+Content-Type: application/pdf
+
+< ./public/generated_pdf.pdf
+--boundary--
